@@ -9,7 +9,7 @@ This repository runs the [ComplyRobin rotation runner](https://github.com/comply
 
    | Secret | What it is |
    | --- | --- |
-   | `COMPLYROBIN_TOKEN` | The runner token ComplyRobin showed you once (`crr_…`). |
+   | `COMPLYROBIN_TOKEN` | The runner token (`crr_…`). Already here if ComplyRobin made this repository for you; otherwise the token ComplyRobin showed you once. |
    | `OPENAI_ADMIN_KEY` | To rotate OpenAI keys: an OpenAI admin key that can manage API keys. |
    | `GOOGLE_CLOUD_CREDENTIALS` | To rotate Google Cloud keys: the JSON key file of a service account that can manage keys. |
    | `LARAVEL_CLOUD_API_TOKEN` | To put keys in Laravel Cloud: an API token that can update secrets and deploy. |
@@ -21,4 +21,4 @@ This repository runs the [ComplyRobin rotation runner](https://github.com/comply
 
 3. Test it: go to **Actions, Rotate keys, Run workflow**, choose `check` and run it. The results also show on the **Rotation runners** page in ComplyRobin.
 
-That's all. The runner checks in every hour, and ComplyRobin decides what is due.
+That's all. The runner checks in every hour, and ComplyRobin decides what is due. On its first check-in it also sends ComplyRobin the names of the projects, apps and repositories your tokens can see (never a key), so you can pick them when you set up a credential.
